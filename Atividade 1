@@ -1,0 +1,59 @@
+package guitarra;
+
+
+public class Guitarra {
+
+    
+    public static void main(String[] args) {
+        Guitar c1 = new Guitar();
+        c1.marca = "Gibson";
+        c1.modelo = "les Paul";
+        c1.cor = "Vermelha";
+        c1.cordas = 6;
+        c1.mao();
+        c1.status();
+        c1.tocar();
+                
+    }
+    
+}
+
+
+
+
+package guitarra;
+
+
+public class Guitar {
+    String marca;
+    String modelo;
+    String cor;
+    int cordas;
+    boolean guardada;
+    void status() {
+        System.out.println("Cor:" + this.cor);
+        System.out.println("Marca:" + this.marca);
+        System.out.println("Modelo:" + this.modelo);
+        System.out.println("Numero de Cordas:" + this.cordas);
+        System.out.println("Esta Guardada?:" + this.guardada);
+        
+    }
+    
+    void tocar() {
+        if (this.guardada == true) {
+            System.out.println("Não é Possivel tocar");
+        } else {
+            System.out.println("Rock and roll!!!");
+        }
+        
+    }
+    
+    void estante(){   
+        this.guardada = true;
+    }
+    
+    void mao() {
+        this.guardada = false;
+        
+    }
+}
